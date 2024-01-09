@@ -1,4 +1,3 @@
-using System.IO;
 using System.Xml.Linq;
 using UnityEditor;
 
@@ -8,10 +7,10 @@ namespace CsprojLangVersionProcessor.Editor
     {
         static string OnGeneratedCSProject(string path, string content)
         {
-            return OverwriteLangVersion(path, content, LangVersionSettings.type);
+            return OverwriteLangVersion(content, LangVersionSettings.type);
         }
 
-        static string OverwriteLangVersion(string path, string content, LangVersionType langVersionType)
+        static string OverwriteLangVersion(string content, LangVersionType langVersionType)
         {
             var versionString = GetCsVersionString(langVersionType);
             if (versionString == null) return content;
@@ -21,7 +20,6 @@ namespace CsprojLangVersionProcessor.Editor
             {
                 element.Value = versionString;
             }
-            File.WriteAllText(path, doc.ToString());
 
             return doc.ToString();
         }
