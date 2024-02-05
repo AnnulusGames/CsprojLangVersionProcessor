@@ -16,7 +16,8 @@ namespace CsprojLangVersionProcessor.Editor
             if (versionString == null) return content;
 
             var doc = XDocument.Parse(content);
-            foreach (var element in doc.Descendants("LangVersion"))
+            var ns = doc.Root!.Name.Namespace;
+            foreach (var element in doc.Descendants(ns + "LangVersion"))
             {
                 element.Value = versionString;
             }
