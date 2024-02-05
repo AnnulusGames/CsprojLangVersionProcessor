@@ -1,6 +1,6 @@
 {
     "name": "com.annulusgames.csproj-langversion-processor",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "Csproj LangVersion Processor",
     "description": "A Unity editor extension that automatically overrides the LangVersion property of csproj files and allows the latest C# version to work in the IDE.",
     "author": {
