@@ -1,7 +1,9 @@
 {
     "name": "CsprojLangVersionProcessor.Editor",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:b93f844d45cfcc44fa2b0eed5c9ec6bb"
+    ],
     "includePlatforms": [
         "Editor"
     ],
@@ -11,6 +13,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.ide.visualstudio",
+            "expression": "",
+            "define": "IDE_VISUAL_STUDIO"
+        }
+    ],
     "noEngineReferences": false
 }
