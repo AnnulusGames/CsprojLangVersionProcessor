@@ -33,6 +33,20 @@ namespace CsprojLangVersionProcessor.Editor
                     {
                         EditorUserSettings.SetConfigValue(ConfigKey, LangVersionSettings.type.ToString());
                     }
+
+                    GUILayout.Space(10);
+
+                    using (new EditorGUILayout.HorizontalScope())
+                    {
+                        GUILayout.Space(15);
+
+                        if (GUILayout.Button("Regenerate Project Files"))
+                        {
+                            CodeEditorHelper.RegenerateCSharpProjects();
+                        }
+
+                        GUILayout.Space(15);
+                    }
                 },
                 keywords = new HashSet<string>(new[] { "csproj", "langVersion" })
             };
